@@ -1,0 +1,18 @@
+#bottom {
+  padding: 2rem 1rem;
+  background: radial-gradient(circle at 68% 0%, rgba(210, 154, 84, 0.13), transparent 34rem),
+    linear-gradient(180deg, #151511 0%, var(--bg) 42%, #0f100e 100%);
+  color: #efd6c1;
+}
+
+#bottom .container { max-width: 1200px; }
+#bottom .container > h2 { font-size: 2rem; }
+#bottom .container .row { row-gap: 24px; }
+#bottom .container .col { min-width: 0; }
+#bottom p { overflow-wrap: anywhere; line-height: 1.6; }
+#bottom img { display: block; width: min(96px, 24vw); height: auto; margin: 0 auto 24px; }
+
+@media (max-width: 575.98px) {
+  #bottom { padding: 1.5rem .5rem; }
+  #bottom .container > h2 { font-size: 1.75rem; }
+}

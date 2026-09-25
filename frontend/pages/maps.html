@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa | Oxku Frutas y Verduras</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: clamp(16px, 4vw, 40px); font-family: system-ui, sans-serif; color: #202820; }
+    main { width: min(100%, 1200px); margin-inline: auto; }
+    h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+    #googleMap { width: 100%; height: min(65vh, 620px); min-height: 280px; border-radius: 8px; }
+    @media (max-width: 575.98px) { #googleMap { height: 55vh; min-height: 260px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Encuéntranos</h1>
+    <div id="googleMap" aria-label="Mapa de ubicación"></div>
+  </main>
+  <script>
+    function myMap() {
+      const map = new google.maps.Map(document.getElementById("googleMap"), {
+        center: new google.maps.LatLng(51.508742, -0.120850),
+        zoom: 5
+      });
+    }
+  </script>
+  <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</body>
+</html>
